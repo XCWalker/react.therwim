@@ -97,6 +97,7 @@
     text-transform: capitalize;
     text-align: center;
 }
+
 #root>main>section.collection-view>.container>header>.container span {
     /* text */
     font-size: min(18px, 4vmin);
@@ -108,6 +109,78 @@
 
 /*** main ***/
 #root>main>section.collection-view>.container>main {}
+
+#root>main>section.collection-view>.container>main>.container {
+    /* sizing */
+    padding: var(--header-style-padding);
+
+    /* grid */
+    display: grid;
+    grid-template-columns: 350px 1fr;
+}
+
+/** sidebar **/
+#root>main>section.collection-view>.container>main>.container>.sidebar {}
+
+#root>main>section.collection-view>.container>main>.container>.sidebar>.item {
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--default-padding);
+
+    /* styling */
+    color: var(--foreground-color-200);
+}
+
+/** sidebar - author **/
+#root>main>section.collection-view>.container>main>.container>.sidebar>.item#author {
+    /* sizing */
+    padding: var(--default-padding);
+
+    /* text */
+    text-decoration: none;
+}
+
+#root>main>section.collection-view>.container>main>.container>.sidebar>.item#author:focus,
+#root>main>section.collection-view>.container>main>.container>.sidebar>.item#author:hover {
+    background-color: var(--foreground-color-200);
+    color: var(--background-color-200);
+}
+
+#root>main>section.collection-view>.container>main>.container>.sidebar>.item#author>img {
+    /* sizing */
+    --size: 60px;
+    width: var(--size);
+    height: var(--size);
+
+    /* styling */
+    border-radius: 50%;
+}
+
+#root>main>section.collection-view>.container>main>.container>.sidebar>.item#author>.container {
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: calc(var(--default-padding) / 2);
+}
+
+#root>main>section.collection-view>.container>main>.container>.sidebar>.item#author>.container span.title {
+    /* text */
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+#root>main>section.collection-view>.container>main>.container>.sidebar>.item#author>.container span.subTitle {
+    /* text */
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+}
 
 /*** footer ***/
 #root>main>section.collection-view>.container>footer {}

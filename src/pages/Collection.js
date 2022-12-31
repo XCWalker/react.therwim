@@ -75,7 +75,22 @@ export function CollectionView() {
                             <span>{collection.about?.subTitle}</span>
                         </div>
                     </header>
-                    <main></main>
+                    <main>
+                        <div className="container">
+                            <div className="sidebar">
+                                <Link to={"/user/" + collection.info?.author} className="item" id="author">
+                                    <img src={author.images?.photoURL} alt="" />
+                                    <div className="container">
+                                        <span className="title">{author.about?.firstname} {author.about?.lastname}</span>
+                                        <span className="subTitle">{author.about?.displayname}</span>
+                                    </div>
+                                </Link>
+                            </div>
+                            <div className="main">
+
+                            </div>
+                        </div>
+                    </main>
                     <footer></footer>
                 </div>
             </section>

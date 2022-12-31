@@ -135,7 +135,7 @@ export async function getRecipe(ID, setLoading) {
     if (setLoading) setLoading(true)
 
     try {
-        const docSnap = await getDoc(doc(db, "recipes", ID));
+        const docSnap = await getDoc(doc(db, "collections", ID));
         if (setLoading) setLoading(false)
         return docSnap.data();
     } catch (e) {
@@ -150,7 +150,7 @@ export async function getUsersRecipes(ID, setLoading) {
 
     let arr = [];
 
-    const q = query(collection(db, "recipes"), where("info.author", "==", ID));
+    const q = query(collection(db, "collections"), where("info.author", "==", ID));
 
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
@@ -166,7 +166,7 @@ export async function getFeaturedRecipes(setLoading) {
 
     let arr = [];
 
-    const q = query(collection(db, "recipes"), where("info.featured", "==", true));
+    const q = query(collection(db, "collections"), where("info.featured", "==", true));
 
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
@@ -185,11 +185,11 @@ export async function getRecipesInfiniteScroller(key) {
     if (key === "") {
         // firstLoad
 
-        q = query(collection(db, "recipes"), orderBy("info.createdAt", "desc"), limit(5));
+        q = query(collection(db, "collections"), orderBy("info.createdAt", "desc"), limit(5));
     } else {
         // infiniteLoads
 
-        q = query(collection(db, "recipes"), orderBy("info.createdAt", "desc"), startAfter(key), limit(
+        q = query(collection(db, "collections"), orderBy("info.createdAt", "desc"), startAfter(key), limit(
             5
         ));
     }
@@ -211,11 +211,11 @@ export async function getUsersRecipesInfiniteScroller(ID, key) {
     if (key === "") {
         // firstLoad
 
-        q = query(collection(db, "recipes"), where("info.author", "==", ID), orderBy("info.createdAt", "desc"), limit(5));
+        q = query(collection(db, "collections"), where("info.author", "==", ID), orderBy("info.createdAt", "desc"), limit(5));
     } else {
         // infiniteLoads
 
-        q = query(collection(db, "recipes"), where("info.author", "==", ID), orderBy("info.createdAt", "desc"), startAfter(key), limit(
+        q = query(collection(db, "collections"), where("info.author", "==", ID), orderBy("info.createdAt", "desc"), startAfter(key), limit(
             5
         ));
     }
@@ -233,7 +233,7 @@ export async function getHeroRecipe() {
     var id;
     var data;
 
-    var q = query(collection(db, "recipes"), orderBy("info.createdAt", "desc"), limit(1));
+    var q = query(collection(db, "collections"), orderBy("info.createdAt", "desc"), limit(1));
 
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
@@ -268,7 +268,7 @@ export async function createRecipe(recipeOBJ, recipeMainImage, recipeOtherImages
 
     setLoading(true)
     try {
-        const docSnap = await addDoc(collection(db, "recipes"), {
+        const docSnap = await addDoc(collection(db, "collections"), {
             about: recipeOBJ.about,
             ingredients: recipeOBJ.ingredients,
             instructions: recipeOBJ.instructions,
@@ -324,7 +324,7 @@ export async function updateRecipe(recipeOBJ, recipeMainImage, recipeOtherImages
         recipeImagesArray = recipeOBJ.images.other
     }
 
-    await updateDoc(doc(db, "recipes", ID), {
+    await updateDoc(doc(db, "collections", ID), {
         about: recipeOBJ.about,
         ingredients: recipeOBJ.ingredients,
         instructions: recipeOBJ.instructions,

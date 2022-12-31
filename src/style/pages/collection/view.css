@@ -1,0 +1,113 @@
+/**** Collection Page - View ****/
+#root>main>section.collection-view {}
+
+#root>main>section.collection-view>.container {}
+
+/*** header ***/
+#root>main>section.collection-view>.container>header {
+    /* position */
+    position: relative;
+
+    /* sizing */
+    width: 100%;
+    height: min(750px, max(45vh, 200px));
+}
+
+#root>main>section.collection-view>.container>header img {
+    /* position */
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    /* sizing */
+    width: 100%;
+    height: 100%;
+
+    /* image */
+    object-fit: cover;
+}
+
+#root>main>section.collection-view>.container>header>.container {
+    /* sizing */
+    width: 100%;
+    height: 100%;
+    padding: var(--header-style-padding);
+    padding-top: var(--header-stacked-offset);
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#root>main>section.collection-view>.container>header>.container::before {
+    /* content */
+    content: "";
+
+    /* position */
+    position: absolute;
+    inset: 0;
+    bottom: auto;
+    z-index: -1;
+
+    /* sizing */
+    width: 100%;
+    height: var(--header-stacked-offset);
+
+    /* styling */
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+}
+
+#root>main>section.collection-view>.container>header>.container::after {
+    /* content */
+    content: "";
+
+    /* position */
+    position: absolute;
+    inset: 0;
+    top: auto;
+    z-index: -1;
+
+    /* sizing */
+    width: 100%;
+    height: var(--header-stacked-offset);
+
+    /* styling */
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+}
+
+#root>main>section.collection-view>.container>header>.container h1 {
+    /* spacing */
+    margin: 0;
+    padding: 0;
+
+    /* text */
+    font-size: min(32px, 6vmin);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: capitalize;
+    text-align: center;
+}
+#root>main>section.collection-view>.container>header>.container span {
+    /* text */
+    font-size: min(18px, 4vmin);
+    font-weight: 600;
+    line-height: 1;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/*** main ***/
+#root>main>section.collection-view>.container>main {}
+
+/*** footer ***/
+#root>main>section.collection-view>.container>footer {}

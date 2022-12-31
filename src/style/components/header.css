@@ -1,0 +1,127 @@
+/**** Header Component ****/
+#root>header {
+    /* position */
+    position: fixed;
+    inset: 0;
+    bottom: 0;
+    z-index: 998;
+
+    /* sizing */
+    width: 100%;
+    height: var(--header-height);
+    translate: 0 var(--header-offset);
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    /* transition */
+    transition: translate var(--transition-duration-600) var(--transition-duration-600) var(--transition-method-default), backdrop-filter var(--transition-duration-600) 0s var(--transition-method-default);
+}
+
+html[data-page-scrolled="true"] #root>header {
+    translate: 0 0;
+    backdrop-filter: blur(10px) brightness(85%);
+    transition-delay: 0s, var(--transition-duration-600);
+}
+
+#root>header>.container {
+    /* sizing */
+    width: 100%;
+    height: var(--header-height);
+    padding: var(--header-padding);
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    /* styling */
+    color: var(--foreground-color-100);
+}
+
+#root>header>.container a.logo {
+    /* sizing */
+    height: 100%;
+
+    /* styling */
+    color: inherit;
+}
+
+#root>header>.container a.logo:hover,
+#root>header>.container a.logo:focus {
+    /* styling */
+    outline: 2px solid currentColor;
+    outline-offset: 1px;
+}
+
+#root>header>.container a.logo svg {
+    /* sizing */
+    height: 100%;
+
+    /* styling */
+    color: inherit;
+    fill: currentColor;
+}
+
+#root>header>.container button,
+#root>header>.container>div {
+    /* sizing */
+    --size: 28px;
+    height: var(--size);
+    width: var(--size);
+    margin: 0;
+    padding: 0;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+
+    /* styling */
+    color: inherit;
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+#root>header>.container button div {
+    /* sizing */
+    height: 6px;
+    width: 100%;
+
+    /* styling */
+    background: currentColor;
+    transform-origin: center right;
+
+    /* transition */
+    transition: var(--transition-scale-400);
+}
+
+#root>header>.container button div:nth-child(2) {
+    scale: 66% 100%;
+}
+
+#root>header>.container button:hover div:nth-child(2) {
+    scale: 100% 100%;
+}
+
+#root>header>.container button:focus-visible {
+    /* styling */
+    outline: 2px solid currentColor;
+    outline-offset: 1px;
+}
+
+#root>header>.container button:focus-visible div {
+    scale: 100% 100% !important;
+}
+
+#root>header>.container button:focus div:nth-child(1),
+#root>header>.container button:focus div:nth-child(3) {
+    scale: 66% 100%;
+}

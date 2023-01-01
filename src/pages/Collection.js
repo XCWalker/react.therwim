@@ -86,8 +86,12 @@ export function CollectionView() {
                                     </div>
                                 </Link>
                             </div>
-                            <div className="main">
-
+                            <div className="main" data-child-count={collection.images?.other.length}>
+                                {collection.images?.other && <>
+                                    {collection.images?.other.map((image, index) => {
+                                        return <img src={image} key={index} alt="" />
+                                    })}
+                                </>}
                             </div>
                         </div>
                     </main>

@@ -117,6 +117,7 @@
     /* grid */
     display: grid;
     grid-template-columns: 350px 1fr;
+    gap: calc(var(--default-padding) * 2);
 }
 
 /** sidebar **/
@@ -141,6 +142,9 @@
 
     /* text */
     text-decoration: none;
+
+    /* styling */
+    border-radius: 5px;
 }
 
 #root>main>section.collection-view>.container>main>.container>.sidebar>.item#author:focus,
@@ -180,6 +184,54 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 1;
+}
+
+/** mainbar **/
+#root>main>section.collection-view>.container>main>.container>.main {
+    /* grid */
+    column-count: 3;
+    gap: var(--default-padding);
+}
+
+#root>main>section.collection-view>.container>main>.container>.main[data-child-count="2"] {
+    column-count: 2;
+}
+
+#root>main>section.collection-view>.container>main>.container>.main[data-child-count="1"] {
+    column-count: 1;
+}
+
+@media (max-width: 1400px) {
+    #root>main>section.collection-view>.container>main>.container>.main {
+        /* grid */
+        column-count: 2;
+    }
+}
+
+@media (max-width: 1000px) {    
+    #root>main>section.collection-view>.container>main>.container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    #root>main>section.collection-view>.container>main>.container>.main {
+        /* grid */
+        column-count: 1;
+    }
+}
+
+#root>main>section.collection-view>.container>main>.container>.main img {
+    /* sizing */
+    width: 100%;
+    height: fit-content;
+    margin-bottom: var(--default-padding);
+
+    /* flex */
+    display: flex;
+
+    /* styling */
+    border-radius: 5px;
 }
 
 /*** footer ***/

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Therwim.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.80371094"
+     inkscape:cx="280.57351"
+     inkscape:cy="283.06197"
+     inkscape:window-width="1440"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Background"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect846"
+       style="font-variation-settings:'wght' 700;fill:#750d37;stroke-width:0.5"
+       d="m 100,0 h 312 c 55.4,0 100,44.6 100,100 v 312 c 0,55.4 -44.6,100 -100,100 H 100 C 44.6,512 0,467.4 0,412 V 100 C 0,44.6 44.6,0 100,0 Z" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Txt">
+    <path
+       id="path825"
+       style="font-weight:bold;font-size:330.342px;line-height:1;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:center;text-anchor:middle;fill:#f7f9f7;stroke-width:0.943831"
+       d="m 278.46289,133.44336 v 245.11328 h 51.5332 v -87.87109 c 0,-11.0114 1.76151,-20.0406 5.28516,-27.08789 3.74388,-7.0473 8.81065,-12.22197 15.19727,-15.52539 6.60684,-3.52365 13.98437,-5.28516 22.13281,-5.28516 11.45186,0 20.26135,3.41317 26.42773,10.24023 6.38662,6.82707 9.57813,17.39807 9.57813,31.71289 v 93.81641 h 51.5332 V 276.8125 c 0,-18.0587 -3.19152,-32.81572 -9.57812,-44.26758 -6.38662,-11.67208 -15.19611,-20.25992 -26.42774,-25.76562 -11.0114,-5.72593 -23.56557,-8.58985 -37.66015,-8.58985 -15.19574,0 -28.73855,3.19347 -40.63086,9.58008 -5.98385,3.21354 -11.26751,7.1269 -15.85743,11.73438 v -86.06055 z m -226.613281,13.875 v 43.60352 H 125.8457 v 187.63476 h 53.51563 V 190.92188 h 73.99609 v -43.60352 z" />
+  </g>
+</svg>

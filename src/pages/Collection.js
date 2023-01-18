@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
 import { LogoFacebook, LogoTwitter } from "../components/logo";
-import { getRecipe as getCollection, getUserInfo, useAuth } from "../firebase";
+import { getCollection, getUserInfo, useAuth } from "../firebase";
 import { Error } from "./Error";
 
 import "../style/pages/collection/view.css"
@@ -58,9 +58,9 @@ export function CollectionView() {
 
         {!loading && !error && <>
             <Helmet>
-                <title>{collection?.about.title + ' by ' + author?.about.displayname + ' | Rnaxan'}</title>
-                <meta property="og:title" name="title" content={collection?.about.title + ' by ' + author?.about.displayname + ' | Rnaxan'} />
-                <meta name="description" content={collection?.about.title + " (" + collection?.about.subTitle + ") by " + author?.about.firstname + " " + author?.about.lastname + " | Only On Rnaxan"} />
+                <title>{collection?.about.title + ' by ' + author?.about.displayname + ' | Therwim'}</title>
+                <meta property="og:title" name="title" content={collection?.about.title + ' by ' + author?.about.displayname + ' | Therwim'} />
+                <meta name="description" content={collection?.about.title + " (" + collection?.about.subTitle + ") by " + author?.about.firstname + " " + author?.about.lastname + " | Only On Therwim"} />
 
                 <meta property="og:image" content={collection.images?.main} />
 
@@ -86,7 +86,7 @@ export function CollectionView() {
                                     </div>
                                 </Link>
                             </div>
-                            <div className="main" data-child-count={collection.images?.other.length}>
+                            <div className="main">
                                 {collection.images?.other && <>
                                     {collection.images?.other.map((image, index) => {
                                         return <img src={image} key={index} alt="" />

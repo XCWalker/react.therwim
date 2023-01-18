@@ -131,7 +131,7 @@ export async function getUserInfo(userID) {
     }
 }
 
-export async function getRecipe(ID, setLoading) {
+export async function getCollection(ID, setLoading) {
     if (setLoading) setLoading(true)
 
     try {
@@ -177,7 +177,7 @@ export async function getFeaturedRecipes(setLoading) {
     return arr
 }
 
-export async function getRecipesInfiniteScroller(key) {
+export async function getCollectionsInfiniteScroller(key) {
     let recipes = [];
     var lastKey = "";
     var q;

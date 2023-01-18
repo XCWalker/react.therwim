@@ -189,35 +189,14 @@
 /** mainbar **/
 #root>main>section.collection-view>.container>main>.container>.main {
     /* grid */
-    column-count: 3;
+    column-count: auto;
+    column-width: 400px;
     gap: var(--default-padding);
-}
-
-#root>main>section.collection-view>.container>main>.container>.main[data-child-count="2"] {
-    column-count: 2;
-}
-
-#root>main>section.collection-view>.container>main>.container>.main[data-child-count="1"] {
-    column-count: 1;
-}
-
-@media (max-width: 1400px) {
-    #root>main>section.collection-view>.container>main>.container>.main {
-        /* grid */
-        column-count: 2;
-    }
 }
 
 @media (max-width: 1000px) {    
     #root>main>section.collection-view>.container>main>.container {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    #root>main>section.collection-view>.container>main>.container>.main {
-        /* grid */
-        column-count: 1;
     }
 }
 

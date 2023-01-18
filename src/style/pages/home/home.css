@@ -1,0 +1,155 @@
+#root>main>section.home {}
+
+#root>main>section.home>.container {
+    /* spacing */
+    padding: var(--header-style-padding);
+}
+
+#root>main>section.home>.container ul {
+    /* spacing */
+    margin: 0;
+    padding: 0;
+
+    /* column */
+    column-count: auto;
+    column-width: 400px;
+}
+
+/* item */
+#root>main>section.home>.container ul a {
+    /* column */
+    break-inside: avoid;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    /* styling */
+    text-decoration: none;
+}
+
+#root>main>section.home>.container ul a:focus,
+#root>main>section.home>.container ul a:hover {
+    /* styling */
+    background-color: var(--foreground-color-100);
+    border-radius: 5px;
+}
+
+#root>main>section.home>.container ul a .image {
+    /* sizing */
+    width: 100%;
+
+    /* flex */
+    display: flex;
+
+    /* styling */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#root>main>section.home>.container ul a .image img {
+    /* sizing */
+    width: 100%;
+}
+
+#root>main>section.home>.container ul a .about {
+    /* sizing */
+    width: 100%;
+    padding: 10px;
+    padding-top: 0;
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#root>main>section.home>.container ul a .about .profilePicture {
+    /* sizing */
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+
+    /* styling */
+    border-radius: 50%;
+    background-color: var(--foreground-color-500);
+}
+
+#root>main>section.home>.container ul a .about .profilePicture img {
+    /* sizing */
+    width: var(--size);
+    height: var(--size);
+
+    /* styling */
+    border-radius: 50%;
+}
+
+#root>main>section.home>.container ul a .about .profilePicture:focus img,
+#root>main>section.home>.container ul a .about .profilePicture:hover img {
+    scale: 0.8;
+}
+
+#root>main>section.home>.container ul a .about .details {
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    /* styling */
+    color: var(--foreground-color-100);
+}
+
+#root>main>section.home>.container ul a:focus .about .details,
+#root>main>section.home>.container ul a:hover .about .details {
+    color: var(--background-color-100);
+}
+
+#root>main>section.home>.container ul a .about .details .info {
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+    /* styling */
+    color: var(--foreground-color-500);
+}
+
+#root>main>section.home>.container ul a:focus .about .details .info,
+#root>main>section.home>.container ul a:hover .about .details .info {
+    color: var(--background-color-500);
+}
+
+#root>main>section.home>.container ul a .about .details .info a {
+    /* text */
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+
+    /* styling */
+    color: inherit;
+}
+
+#root>main>section.home>.container ul a .about .details .info .separator {
+    /* sizing */
+    width: 2px;
+    height: 100%;
+
+    /* styling */
+    background-color: currentColor;
+}
+
+#root>main>section.home>.container ul a .about .details .title {
+    /* text */
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+#root>main>section.home>.container ul a .about .details .subTitle {
+    /* text */
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+}
